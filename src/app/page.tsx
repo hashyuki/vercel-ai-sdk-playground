@@ -1,10 +1,10 @@
 import styles from "./page.module.css";
-import TextGenerate from "@/app/text-generate/page";
-import StreamingTextGenerate from "@/app/streaming-text-generate/page";
-import StructuredDataGenerate from "@/app/structured-data-generate/page";
-import StreamingStructuredDataGenerate from "@/app/streaming-structured-data-generate/page";
-import ChatCompletion from "@/app/chat-completion/page";
-import StreamingChatCompletion from "@/app/streaming-chat-completion/page";
+import TextGenerate from "@/app/basic/text-generate/page";
+import StreamingTextGenerate from "@/app/basic/streaming-text-generate/page";
+import StructuredDataGenerate from "@/app/basic/structured-data-generate/page";
+import StreamingStructuredDataGenerate from "@/app/basic/streaming-structured-data-generate/page";
+import ChatCompletion from "@/app/chat/chat-completion/page";
+import StreamingChatCompletion from "@/app/chat/streaming-chat-completion/page";
 
 export default function Home() {
   return (
