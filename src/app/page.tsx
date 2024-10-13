@@ -5,6 +5,8 @@ import BatchStructuredDataGeneration from "@/app/structured-data-generation/batc
 import StreamingStructuredDataGeneration from "@/app/structured-data-generation/streaming/page";
 import BatchChatGeneration from "@/app/chat/batch/page";
 import StreamingChatGeneration from "@/app/chat/streaming/page";
+import BatchChatGenerationWithTool from "@/app/tool/batch/page";
+import BatchChatGenerationWithToolAndRendering from "@/app/tool/rendering/page";
 
 export default function Home() {
   return (
@@ -69,6 +71,21 @@ export default function Home() {
           <span>【Streaming】ユーザーの質問に対して回答する</span>
           <div>
             <StreamingChatGeneration />
+          </div>
+        </div>
+      </div>
+      <h2>Tool</h2>
+      <span>
+        ある種の言語モデルは、数学の問題を解くために電卓を使ったり、情報を検索するためにブラウザを使ったりするように、タスクを実行するために外部ツールを使用する機能を持っている。ツール情報を言語モデルと共有する最も一般的な方法は、関数の定義とその説明を共有し、関数が実行され、出力に基づいて応答が生成されるようにすることです。
+        <br />
+        このセクションでは、言語モデルがNext.jsアプリケーションでこれらの関数を呼び出せるようにするための、toolsパラメータの使い方を学びます。
+      </span>
+      <div className={styles.grid}>
+        <div>
+          <h3>/tool/text</h3>
+          <span>【Batch】ユーザーの質問に対してツールを用いて回答する</span>
+          <div>
+            <BatchChatGenerationWithTool />
           </div>
         </div>
       </div>
