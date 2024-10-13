@@ -1,10 +1,10 @@
 import styles from "./page.module.css";
-import TextGenerate from "@/app/basic/text-generate/page";
-import StreamingTextGenerate from "@/app/basic/streaming-text-generate/page";
-import StructuredDataGenerate from "@/app/basic/structured-data-generate/page";
-import StreamingStructuredDataGenerate from "@/app/basic/streaming-structured-data-generate/page";
-import ChatCompletion from "@/app/chat/chat-completion/page";
-import StreamingChatCompletion from "@/app/chat/streaming-chat-completion/page";
+import BatchTextGeneration from "@/app/text-generation/batch/page";
+import StreamingTextGeneration from "@/app/text-generation/streaming/page";
+import BatchStructuredDataGeneration from "@/app/structured-data-generation/batch/page";
+import StreamingStructuredDataGeneration from "@/app/structured-data-generation/streaming/page";
+import BatchChatGeneration from "@/app/chat/batch/page";
+import StreamingChatGeneration from "@/app/chat/streaming/page";
 
 export default function Home() {
   return (
@@ -23,46 +23,52 @@ export default function Home() {
         <br />
       </span>
       <h2>Basic</h2>
-      <span>ボタンのクリックをトリガーにOpenAI APIをコールするデモ</span>
+      <span>
+        言語モデルでできる最も基本的なことの1つは、テキストを生成することです。このセクションでは、テキストを生成し、それをクライアントにストリーミングする方法を学びます。
+        <br />
+        テキストだけでなく、好きなスキーマを与えて構造化データを生成し、それをクライアントにストリーミングすることも学びます。
+      </span>
       <div className={styles.grid}>
         <div>
-          <h3>TextGenerate</h3>
-          <span>非構造化テキストを取得する</span>
+          <h3>/text-generation/batch</h3>
+          <span>【Batch】非構造化テキストを取得する</span>
           <div>
-            <TextGenerate />
+            <BatchTextGeneration />
           </div>
         </div>
         <div>
-          <h3>StreamingTextGenerate</h3>
-          <span>[Streaming] 非構造化テキストを取得する</span>
-          <StreamingTextGenerate />
+          <h3>/text-generation/streaming</h3>
+          <span>【Streaming】 非構造化テキストを取得する</span>
+          <StreamingTextGeneration />
         </div>
         <div>
-          <h3>StructuredDataGenerate</h3>
-          <span>構造化テキストを取得する</span>
-          <StructuredDataGenerate />
+          <h3>/structured-data-generation/batch</h3>
+          <span>【Batch】構造化テキストを取得する</span>
+          <BatchStructuredDataGeneration />
         </div>
         <div>
-          <h3>StreamingStructuredDataGenerate</h3>
-          <span>[Streaming] 構造化テキストを取得する</span>
-          <StreamingStructuredDataGenerate />
+          <h3>/structured-data-generation/streaming</h3>
+          <span>【Streaming】 構造化テキストを取得する</span>
+          <StreamingStructuredDataGeneration />
         </div>
       </div>
       <h2>Chat</h2>
-      <span>Chat形式で実装する</span>
+      <span>
+        これまで、単一のプロンプトを使ってテキストと構造化データを生成する方法を学んできました。このセクションでは、メッセージを使用して言語モデルに一連のメッセージを追加し、会話のコンテキストに基づいて応答を生成する方法を学びます。
+      </span>
       <div className={styles.grid}>
         <div>
-          <h3>ChatComplation</h3>
-          <span>質問に対して回答をする</span>
+          <h3>/chat/batch</h3>
+          <span>【Batch】ユーザーの質問に対して回答する</span>
           <div>
-            <ChatCompletion />
+            <BatchChatGeneration />
           </div>
         </div>
         <div>
-          <h3>StreamingChatComplation</h3>
-          <span>[Streaming]質問に対して回答をする</span>
+          <h3>/chat/streaming</h3>
+          <span>【Streaming】ユーザーの質問に対して回答する</span>
           <div>
-            <StreamingChatCompletion />
+            <StreamingChatGeneration />
           </div>
         </div>
       </div>
