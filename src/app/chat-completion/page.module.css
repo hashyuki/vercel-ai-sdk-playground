@@ -1,0 +1,19 @@
+.chatArea {
+  border-radius: 0.5rem;
+  border: 1px solid whitesmoke;
+  padding: 1rem;
+  height: 15rem;
+  overflow-y: scroll;
+}
+
+.inputArea {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.textInput {
+  flex-grow: 1;
+}
